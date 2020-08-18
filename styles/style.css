@@ -1,0 +1,1153 @@
+@charset "UTF-8";
+/* ----------------------------- Fuentes Google ----------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap");
+/* ------------------------- Variables para Fuentes ------------------------- */
+/* ---------------------------- Estilos Generales --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.item-menu, .btn-sec {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #060A24;
+}
+
+.item-menu {
+  font-size: 16px;
+}
+
+.item-menu:hover {
+  font-weight: 500;
+  color: #00F0B8;
+  text-decoration: line-through;
+}
+
+.item-menu:active {
+  -webkit-filter: opacity(56%);
+          filter: opacity(56%);
+  color: #060A24;
+}
+
+.btn-sec {
+  display: inline-block;
+  padding: 16px 59px;
+  background-color: #00F3BB;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-sec:hover {
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00F0B8), to(#0000FE));
+  background-image: linear-gradient(to right, #00F0B8, #0000FE);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #060A24;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 84px;
+}
+
+h1 #txt-decor {
+  text-decoration: line-through;
+}
+
+h1 #txt-linea::after {
+  content: ".";
+  color: #0000EC;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 32px;
+}
+
+p,
+h5 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  color: #060A24;
+}
+
+h5 {
+  font-weight: 400;
+  line-height: 28px;
+}
+
+#episodios,
+#novedades {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0000FF), to(#0000A3));
+  background-image: linear-gradient(to right, #0000FF, #0000A3);
+}
+
+#episodios h2,
+#novedades h2 {
+  color: #ffffff;
+}
+
+.nav-bar {
+  width: 100%;
+  padding: 22px calc(6.9% - 24px) 22px 6.9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar .btn-logo {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.nav-bar .btn-logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.nav-bar .btn-logo:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.nav-bar #chk-ham {
+  display: none;
+}
+
+.nav-bar label {
+  display: none;
+}
+
+.nav-bar .nav-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar .nav-menu ul li a {
+  display: block;
+  padding: 0px 24px;
+}
+
+iframe {
+  width: 584px;
+  height: 232px;
+  border: none;
+}
+
+/* ----------------------------- Estilos Mobile ----------------------------- */
+@media (max-width: 639px) {
+  .nav-bar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #ffffff;
+  }
+  .nav-bar .btn-logo {
+    padding: 10px 5%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar .btn-logo:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .nav-bar #chk-ham {
+    display: none;
+  }
+  .nav-bar label {
+    display: inline-block;
+    padding: 10px 5%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar label:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .nav-bar .nav-menu {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: -100%;
+    padding: 2px 0 12px 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .nav-bar .nav-menu ul {
+    display: block;
+    list-style: none;
+  }
+  .nav-bar .nav-menu ul li a {
+    display: block;
+    color: #ffffff;
+    padding: 12px 16px;
+  }
+  .nav-bar .nav-menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .nav-bar #chk-ham:checked ~ .nav-menu {
+    left: 0%;
+    background-color: #0000EC;
+  }
+  header {
+    padding: 29px 16px 24px;
+  }
+  header h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+  header h1 #txt-linea {
+    display: block;
+  }
+  header p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 16px 0 36px 0;
+  }
+  header p::before {
+    content: "Un podcast que explora el mundo de la programación.";
+  }
+  header .btn-sec {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 0px;
+  }
+  #episodios {
+    width: 100%;
+    padding: 64px 16px 143.5px;
+    -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+            clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+  }
+  #episodios h2 {
+    font-size: 36px;
+    margin-bottom: 21px;
+  }
+  #episodios .episods-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 11px;
+  }
+  #episodios .episods-grid iframe {
+    width: 100%;
+  }
+  #nosotros {
+    padding: 0px 16px 27px;
+    position: relative;
+  }
+  #nosotros .img-cel {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #nosotros .img-cel img {
+    width: 360px;
+    position: absolute;
+    top: calc(48px - 143.5px);
+  }
+  #nosotros h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+  #invitados {
+    width: 100%;
+    padding: 27px 0px 24px;
+  }
+  #invitados h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 14px;
+    margin-left: 16px;
+  }
+  #invitados #invit-gal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #invitados #invit-gal .img-invit img {
+    width: 100%;
+  }
+  #topicos {
+    width: 100%;
+    padding: 24px 16px 42px;
+  }
+  #topicos h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  #topicos #icons-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 52px;
+  }
+  #topicos #icons-topics .topic {
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #topicos #icons-topics h3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  #novedades {
+    width: 100%;
+    padding: 67px 16px;
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #novedades h2 {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  #novedades .btn-sec {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 13px 0px;
+  }
+  footer {
+    width: 100%;
+    padding: 24px 0px 31px;
+    text-align: center;
+  }
+  footer h5 {
+    margin-bottom: 16px;
+  }
+  footer .social-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .social-menu a {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  footer .social-menu a:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+/* ------------------ Estilos Mobile Intermedio - Phablets ------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  .nav-bar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #ffffff;
+  }
+  .nav-bar .btn-logo {
+    padding: 10px 5%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar .btn-logo:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .nav-bar #chk-ham {
+    display: none;
+  }
+  .nav-bar label {
+    display: inline-block;
+    padding: 10px 5%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar label:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .nav-bar .nav-menu {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: -100%;
+    padding: 2px 0 12px 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .nav-bar .nav-menu ul {
+    display: block;
+    list-style: none;
+  }
+  .nav-bar .nav-menu ul li a {
+    display: block;
+    color: #ffffff;
+    padding: 12px 16px;
+  }
+  .nav-bar .nav-menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .nav-bar #chk-ham:checked ~ .nav-menu {
+    left: 0%;
+    background-color: #0000EC;
+  }
+  header {
+    padding: 29px 16px 24px;
+  }
+  header h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+  header p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 16px 0 36px 0;
+  }
+  header p span {
+    display: block;
+  }
+  header p::before {
+    content: "Un podcast que explora el mundo de la programación y la tecnología.";
+  }
+  header .btn-sec {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 0px;
+  }
+  #episodios {
+    width: 100%;
+    padding: 64px 16px 143.5px;
+    -webkit-clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+            clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+  }
+  #episodios h2 {
+    font-size: 36px;
+    margin-bottom: 21px;
+  }
+  #episodios .episods-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 11px;
+  }
+  #episodios .episods-grid iframe {
+    width: 100%;
+  }
+  #nosotros {
+    padding: 0px 16px 27px;
+    position: relative;
+  }
+  #nosotros .img-cel {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #nosotros .img-cel img {
+    width: 360px;
+    position: absolute;
+    top: calc(48px - 143.5px);
+  }
+  #nosotros h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+  #invitados {
+    width: 100%;
+    padding: 27px 0px 24px;
+  }
+  #invitados h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 14px;
+    margin-left: 16px;
+  }
+  #invitados #invit-gal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #invitados #invit-gal .img-invit {
+    height: 243px;
+  }
+  #invitados #invit-gal .img-invit img {
+    width: 320px;
+  }
+  #topicos {
+    width: 100%;
+    padding: 24px 16px 42px;
+  }
+  #topicos h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  #topicos #icons-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 52px;
+  }
+  #topicos #icons-topics .topic {
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #topicos #icons-topics h3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  #novedades {
+    width: 100%;
+    padding: 67px 16px;
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #novedades h2 {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  #novedades .btn-sec {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 13px 0px;
+  }
+  footer {
+    width: 100%;
+    padding: 24px 0px 31px;
+    text-align: center;
+  }
+  footer h5 {
+    margin-bottom: 16px;
+  }
+  footer .social-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .social-menu a {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  footer .social-menu a:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+/* ----------------------------- Estilos Tablet ----------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-bar {
+    width: 100%;
+    padding: 22px calc(6.9% - 24px) 22px 6.9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+  .nav-bar .btn-logo {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar .btn-logo img {
+    width: 36px;
+    height: 36px;
+  }
+  .nav-bar .btn-logo:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  .nav-bar #chk-ham {
+    display: none;
+  }
+  .nav-bar label {
+    display: none;
+  }
+  .nav-bar .nav-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+  }
+  .nav-bar .nav-menu ul li a {
+    display: block;
+    padding: 0px 24px;
+  }
+  header {
+    padding: 29px 13.9% 5px;
+  }
+  header h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+  header p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 56px;
+  }
+  header p span {
+    display: block;
+  }
+  header p::before {
+    content: "Un podcast que explora el mundo de la programación y la tecnología.";
+  }
+  header .btn-sec {
+    width: 226px;
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 0px;
+  }
+  #episodios {
+    width: 100%;
+    padding: 186px 6.9% 232.6px;
+    -webkit-clip-path: polygon(0% 7%, 100% 0%, 100% 92%, 0% 100%);
+            clip-path: polygon(0% 7%, 100% 0%, 100% 92%, 0% 100%);
+  }
+  #episodios h2 {
+    font-size: 36px;
+    margin-bottom: 26px;
+    margin-left: 6.9%;
+  }
+  #episodios .episods-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 11px;
+  }
+  #episodios .episods-grid iframe {
+    width: 100%;
+  }
+  #nosotros {
+    padding: 0px 13.9% 27px;
+    position: relative;
+  }
+  #nosotros .img-cel {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #nosotros .img-cel img {
+    width: 360px;
+    position: absolute;
+    top: calc(48px - 143.5px);
+  }
+  #nosotros h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  #invitados {
+    width: 100%;
+    padding: 27px 0px 24px;
+  }
+  #invitados h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 36px;
+    margin-left: 13.9%;
+  }
+  #invitados #invit-gal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #invitados #invit-gal .img-invit {
+    height: 243px;
+  }
+  #invitados #invit-gal .img-invit img {
+    width: 320px;
+  }
+  #topicos {
+    width: 100%;
+    padding: 24px 13.9% 42px;
+  }
+  #topicos h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  #topicos #icons-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 52px;
+  }
+  #topicos #icons-topics .topic {
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #topicos #icons-topics h3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  #novedades {
+    width: 100%;
+    padding: 213px 0px 151px;
+    -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+  }
+  #novedades h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 36px;
+  }
+  #novedades .btn-sec {
+    width: 345px;
+    font-size: 16px;
+    padding: 16px 0px;
+  }
+  footer {
+    width: 100%;
+    padding: 36px 6.9% 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .social-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .social-menu a {
+    margin-left: 36px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  footer .social-menu a:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+/* --------------------------- Estilos Laptop y PC -------------------------- */
+@media (min-width: 1024px) {
+  .nav-bar {
+    width: 100%;
+    padding: 22px calc(6.9% - 24px) 22px 6.9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+  .nav-bar .btn-logo {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .nav-bar .btn-logo img {
+    width: 36px;
+    height: 36px;
+  }
+  .nav-bar .btn-logo:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  .nav-bar #chk-ham {
+    display: none;
+  }
+  .nav-bar label {
+    display: none;
+  }
+  .nav-bar .nav-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+  }
+  .nav-bar .nav-menu ul li a {
+    display: block;
+    padding: 0px 24px;
+  }
+  header {
+    padding: 120px 13.9% 5px;
+  }
+  header h1 {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 84px;
+  }
+  header p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 56px;
+  }
+  header p span {
+    display: block;
+  }
+  header p::before {
+    content: "Un podcast que explora el mundo de la programación y la tecnología.";
+  }
+  header .btn-sec {
+    width: 226px;
+    text-align: center;
+    font-size: 18px;
+    padding: 16px 0px;
+  }
+  #episodios {
+    width: 100%;
+    padding: 186px 6.9% 232.6px;
+    -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 92%, 0% 100%);
+            clip-path: polygon(0% 10%, 100% 0%, 100% 92%, 0% 100%);
+  }
+  #episodios h2 {
+    font-size: 48px;
+    margin-bottom: 26px;
+    margin-left: 6.9%;
+  }
+  #episodios .episods-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 72px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #episodios .episods-grid iframe {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  #nosotros {
+    padding: 0px 13.9% 32px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nosotros .img-cel {
+    height: 491.4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #nosotros .img-cel img {
+    height: 660px;
+    position: relative;
+    top: calc(491.4px - 660px);
+  }
+  #nosotros .txt-nosotros {
+    width: 464px;
+    margin-left: 62.4px;
+    margin-top: 20.4px;
+  }
+  #nosotros .txt-nosotros h2 {
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 24px;
+  }
+  #nosotros .txt-nosotros p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  #invitados {
+    width: 100%;
+    padding: 32px 0px 32px;
+  }
+  #invitados h2 {
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 36px;
+    margin-left: 13.9%;
+  }
+  #invitados #invit-gal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #invitados #invit-gal .img-invit {
+    height: 364px;
+  }
+  #invitados #invit-gal .img-invit img {
+    width: 480px;
+  }
+  #topicos {
+    width: 100%;
+    padding: 32px 0 34px;
+  }
+  #topicos h2 {
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 56px;
+    margin-left: 13.9%;
+  }
+  #topicos #icons-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #topicos #icons-topics .topic {
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #topicos #icons-topics .img-topic {
+    width: 260px;
+    height: 130px;
+  }
+  #topicos #icons-topics h3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  #novedades {
+    width: 100%;
+    padding: 213px 0px 151px;
+    -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+  }
+  #novedades h2 {
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 36px;
+  }
+  #novedades .btn-sec {
+    width: 345px;
+    font-size: 18px;
+    padding: 16px 0px;
+  }
+  footer {
+    width: 100%;
+    padding: 36px 6.9% 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer h5 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  footer .social-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .social-menu a {
+    margin-left: 36px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  footer .social-menu a:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+/*# sourceMappingURL=style.css.map */
