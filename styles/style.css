@@ -1090,6 +1090,12 @@ iframe {
             align-items: center;
   }
   #topicos #icons-topics .img-topic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 260px;
     height: 130px;
   }
