@@ -1010,7 +1010,8 @@ iframe{
         .episods-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 72px;
+            row-gap: 72px;
+            column-gap: 5%;
             justify-content: center;
 
             iframe {
